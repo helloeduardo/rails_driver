@@ -300,7 +300,7 @@ RSpec.describe 'Spec Harness' do
 
       expect(json[:data][:attributes][:revenue].to_f.round(2)).to eq(43201227.80)
     end
-    
+
     it 'can get revenue of a single merchant' do
       response = conn("/api/v1/merchants/42/revenue").get
       json = JSON.parse(response.body, symbolize_names: true)
